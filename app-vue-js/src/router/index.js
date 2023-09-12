@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import PageLeaflet from "../views/leaflet/PageLeaflet.vue";
+import VistaPrincipal from "../views/Mapa/VistaPrincipal.vue";
+import olMap from "../views/ComponentesMapas/olMap.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,18 +13,23 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/leaflet",
-      name: "Leaflet",
-      component: PageLeaflet,
+      path: "/olMap",
+      name: "olMap",
+      component: olMap,
     },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
-    },
+    // {
+    //   path: "/leaflet",
+    //   name: "Leaflet",
+    //   component: VistaPrincipal,
+    // },
+    // {
+    //   path: "/about",
+    //   name: "about",
+    //   // route level code-splitting
+    //   // this generates a separate chunk (About.[hash].js) for this route
+    //   // which is lazy-loaded when the route is visited.
+    //   component: () => import("../views/AboutView.vue"),
+    // },
   ],
 });
 

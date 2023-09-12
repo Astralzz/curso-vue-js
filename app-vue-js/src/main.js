@@ -1,14 +1,18 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
+import OpenLayersMap from "vue3-openlayers";
+import "vue3-openlayers/styles.css";
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(OpenLayersMap /* options */);
+app.use(createPinia());
+app.use(router);
+
+app.mount("#app");
