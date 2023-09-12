@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 console.log('====================================');
 console.log("PAGINA DE INICIO");

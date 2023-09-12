@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
+import PaginaInicio from "../pages/PaginaInicio.vue";
+// import { LMap, LTileLayer, LMarker } from 'vue3-leaflet';
 
 // * Rutas
 const rutas: RouteRecordRaw[] = [
@@ -12,7 +14,7 @@ const rutas: RouteRecordRaw[] = [
   {
     path: '/inicio',
     name: 'Inicio',
-    component: () => import('../pages/PaginaInicio.vue')
+   component: PaginaInicio
   },
   {
     path: '/pagina1',
